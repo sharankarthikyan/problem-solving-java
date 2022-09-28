@@ -1,3 +1,5 @@
+package arrays;
+
 public class BinarySearchRotated {
     public static int bsr(int[] arr, int target) {
         int start = 0;
