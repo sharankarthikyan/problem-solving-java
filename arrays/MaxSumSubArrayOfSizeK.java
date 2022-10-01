@@ -15,6 +15,17 @@ class MaxSumSubArrayOfSizeK {
             }
         }
         return maxSum;
+
+        // int maxSum = 0, windowSum;
+        // for (int i = 0; i <= arr.length - k; i++) {
+        // windowSum = 0;
+        // for (int j = i; j < i + k; j++) {
+        // windowSum += arr[j];
+        // }
+        // maxSum = Math.max(maxSum, windowSum);
+        // }
+
+        // return maxSum;
     }
 
     public static void main(String[] args) {
