@@ -21,9 +21,39 @@ class StringSegmentation {
         return false;
     }
 
+    // private boolean wordBreakRecur(String s, Set < String > wordDict, int start)
+    // {
+    // if (start == s.length()) {
+    // return true;
+    // }
+    // for (int end = start + 1; end <= s.length(); end++) {
+    // if (wordDict.contains(s.substring(start, end)) && wordBreakRecur(s, wordDict,
+    // end)) {
+    // return true;
+    // }
+    // }
+    // return false;
+    // }
+
+    // Dynamic Programming
+    // public boolean wordBreak(String s, List < String > wordDict) {
+    // Set < String > wordDictSet = new HashSet < > (wordDict);
+    // boolean[] dp = new boolean[s.length() + 1];
+    // dp[0] = true;
+    // for (int i = 1; i <= s.length(); i++) {
+    // for (int j = 0; j < i; j++) {
+    // if (dp[j] && wordDictSet.contains(s.substring(j, i))) {
+    // dp[i] = true;
+    // break;
+    // }
+    // }
+    // }
+    // return dp[s.length()];
+    // }
+
     public static void main(String[] args) {
-        String[] inputStr = { "hellonow", "nowok", "applepie", "applejuice" };
-        String[][] wordsDictionary = { { "hello", "hell", "on", "now" }, { "hello", "hell", "on", "now" },
+        String[] inputStr = { "catsanddog", "nowok", "applepie", "applejuice" };
+        String[][] wordsDictionary = { { "cats", "dog", "sand", "and", "cat" }, { "hello", "hell", "on", "now" },
                 { "apple", "pear", "pier", "pie" }, { "apple", "pear", "pier", "pie" } };
         for (int i = 0; i < inputStr.length; i++) {
             Set<String> dict = new HashSet<String>(Arrays.asList(wordsDictionary[i]));
